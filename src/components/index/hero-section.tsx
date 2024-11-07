@@ -53,6 +53,7 @@ export default function HeroCarousel() {
                   alt={`carousel image ${index + 1}`}
                   height={1080}
                   width={1920}
+                  quality={70}
                   className="object-cover object-center aspect-video"
                 />
                 <div className="absolute bottom-0 w-full h-[170px] bg-gradient-to-t from-primaryLight via-primaryLight">
@@ -72,7 +73,9 @@ export default function HeroCarousel() {
         {/* <CarouselPrevious />
       <CarouselNext /> */}
       </Carousel>
-      <div className="bg-gradient-to-b mt-[-2px] from-primaryLight from-50% h-[50px]" />
+
+      {/* <div className="bg-gradient-to-b mt-[-2px] from-primaryLight from-50% h-[50px]" /> */}
+      <div className="bg-blue mt-[-2px] h-[30px]" />
     </>
   );
 }
