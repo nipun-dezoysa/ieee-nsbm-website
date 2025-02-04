@@ -1,3 +1,7 @@
+import TwentyThreeExcom from "@/components/excom-page-tabs/2023-excom";
+import TwentyFourExcom from "@/components/excom-page-tabs/2024-excom";
+import TwentyFiveExcom from "@/components/excom-page-tabs/2025-excom";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
 
 export default function Excom() {
@@ -15,6 +19,25 @@ export default function Excom() {
         resolutions, and requirements of the Board, as well as the IEEE NSBM
         Student Branch.
       </p>
+      <Tabs
+        defaultValue="2025"
+        className="container mx-auto mt-3 max-w-[390px] md:max-w-[700px] lg:max-w-[990px] xl:max-w-[1200px]"
+      >
+        <TabsList className="grid grid-cols-3">
+          <TabsTrigger value="2025">2025/26</TabsTrigger>
+          <TabsTrigger value="2024">2024/25</TabsTrigger>
+          <TabsTrigger value="2023">2023/24</TabsTrigger>
+        </TabsList>
+        <TabsContent value="2025">
+          <TwentyFiveExcom />
+        </TabsContent>
+        <TabsContent value="2024">
+          <TwentyFourExcom />
+        </TabsContent>
+        <TabsContent value="2023">
+          <TwentyThreeExcom />
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }
