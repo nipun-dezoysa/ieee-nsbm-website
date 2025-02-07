@@ -14,9 +14,6 @@ const config: Config = {
         grey: "#333333",
         blue: "#00629B",
       },
-      fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
-      },
     },
   },
   plugins: [require("tailwindcss-animate")],
