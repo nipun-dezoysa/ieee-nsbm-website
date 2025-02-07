@@ -55,5 +55,11 @@
       "biome format --write --no-errors-on-unmatched",
       "biome check --write --no-errors-on-unmatched"
     ]
+  },
+  "engines": {
+    "npm": "Unsupported. Use bun instead.",
+    "node": ">=20",
+    "yarn": "Unsupported. Use bun instead.",
+    "pnpm": "Unsupported. Use bun instead."
   }
 }
