@@ -18,7 +18,7 @@ export default function TwentyFiveExcom() {
     }) => (
       <div
         key={member.year}
-        className="flex flex-col items-center w-[350px] h-[350px] shadow-lg rounded-2xl text-center ml-24 my-10 hover:shadow-md transition-shadow duration-300"
+        className="flex flex-col items-center mx-5 md:m w-[350px] h-[350px] shadow-lg rounded-2xl text-center mt-10 hover:shadow-md transition-shadow duration-300"
       >
         <img
           src={member.imageUrl}
@@ -40,7 +40,7 @@ export default function TwentyFiveExcom() {
   );
   return (
     <div className="mx-auto mb-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 container mx-auto max-w-[390px] md:max-w-[690px] lg:max-w-[850px] xl:max-w-[1100px] gap-5">
+      <div className="grid grid-cols-1 justify-items-center md:grid-cols-2 container mx-auto max-w-[390px] md:max-w-[690px] lg:max-w-[850px] xl:max-w-[1100px] md:gap-5 pb-10">
         {excomCard}
       </div>
     </div>
