@@ -38,7 +38,7 @@ export default function HeroCarousel() {
   ];
 
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true }),
+    Autoplay({ delay: 5000, stopOnInteraction: true }),
   );
 
   return (
@@ -47,29 +47,30 @@ export default function HeroCarousel() {
         <CarouselContent>
           {cimages.map((item, index) => (
             <CarouselItem key={index} className="relative">
-              <div className="w-full xl:h-[85vh]">
+              <div className="w-full xl:h-[85vh] aspect-video">
                 <Image
                   src={item.image}
                   alt={`carousel image ${index + 1}`}
-                  height={1080}
-                  width={1920}
                   quality={70}
+                  layout="fill"
                   className="object-cover object-center aspect-video"
                 />
-                <div className="absolute bottom-0 w-full h-[170px] bg-gradient-to-t from-primaryLight via-primaryLight">
-                  <p className="absolute left-2 xl:left-10 bottom-0 text-xs xl:text-base text-white">
-                    {item.text}
-                  </p>
+
+                <div className="absolute bottom-0 w-full h-[170px] bg-gradient-to-t from-primaryLight via-primaryLight flex justify-center items-center">
+                  <div className="absolute bottom-0 w-full max-w-[1170px] min-h-[170px] grow h-full gap-3 flex flex-col justify-center items-start xl:p-0 p-10">
+                    <h1 className="font-semibold text-white md:text-3xl text-xl">
+                      Welcome to IEEE Student Branch of NSBM
+                    </h1>
+                    <p className="text-xs xl:text-base text-white">
+                      {item.text}
+                    </p>
+                  </div>
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div>
-          <h1 className="absolute left-3 xl:left-10 xl:bottom-8 bottom-10 font-semibold text-white xl:text-3xl text-base">
-            Welcome to IEEE Student Branch of NSBM
-          </h1>
-        </div>
+
         {/* <CarouselPrevious />
       <CarouselNext /> */}
       </Carousel>
