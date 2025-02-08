@@ -3,11 +3,15 @@ import Link from "next/link";
 import React from "react";
 import { BsFacebook, BsLinkedin } from "react-icons/bs";
 
-export default function TwentyThreeExcom() {
-  const TwentyFiveExcom = members.filter(
-    (member: { year: number }) => member.year === 2023,
+interface Props {
+  category: string;
+}
+
+export default function TwentyThreeExcom({ category }: Props) {
+  const TwentyThreeExcom = members.filter(
+    (member) => member.year === 2023 && member.category === category,
   );
-  const excomCard = TwentyFiveExcom.map(
+  const excomCard = TwentyThreeExcom.map(
     (member: {
       year: number;
       name: string;
@@ -28,10 +32,10 @@ export default function TwentyThreeExcom() {
         <h2 className="text-xl font-bold">{member.name}</h2>
         <p className="text-sm text-gray-600">{member.title}</p>
         <div className="flex p-2 justify-center text-[20px] gap-2">
-          <Link href="#" className="footer-social">
+          <Link href={member.facebookURL} className="footer-social">
             <BsFacebook />
           </Link>
-          <Link href="#" className="footer-social">
+          <Link href={member.linkdInURL} className="footer-social">
             <BsLinkedin />
           </Link>
         </div>

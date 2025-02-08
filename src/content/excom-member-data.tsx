@@ -14,6 +14,7 @@ export const members = [
     title: "Vice Chair",
     linkdInURL: "",
     facebookURL: "",
+    category: "cs",
   },
   {
     year: 2025,
@@ -22,6 +23,7 @@ export const members = [
     title: "Secretary",
     linkdInURL: "",
     facebookURL: "",
+    category: "wie",
   },
   {
     year: 2025,
@@ -30,6 +32,7 @@ export const members = [
     title: "Treasurer",
     linkdInURL: "",
     facebookURL: "",
+    category: "sb",
   },
   {
     year: 2025,
@@ -38,6 +41,7 @@ export const members = [
     title: "Vice Chair",
     linkdInURL: "",
     facebookURL: "",
+    category: "cs",
   },
   {
     year: 2024,
@@ -46,6 +50,7 @@ export const members = [
     title: "Chair",
     linkdInURL: "",
     facebookURL: "",
+    category: "sb",
   },
   {
     year: 2024,
@@ -54,6 +59,7 @@ export const members = [
     title: "Vice Chair",
     linkdInURL: "",
     facebookURL: "",
+    category: "cs",
   },
   {
     year: 2024,
@@ -62,6 +68,7 @@ export const members = [
     title: "Secretary",
     linkdInURL: "",
     facebookURL: "",
+    category: "wie",
   },
   {
     year: 2024,
@@ -70,5 +77,24 @@ export const members = [
     title: "Treasurer",
     linkdInURL: "",
     facebookURL: "",
+    category: "sb",
+  },
+  {
+    year: 2023,
+    name: "Kavindu Kavishka",
+    imageUrl: "/images/excom/2025/kavindu-kavishka.jpg",
+    title: "Treasurer",
+    linkdInURL: "",
+    facebookURL: "",
+    category: "sb",
+  },
+  {
+    year: 2023,
+    name: "Kavindu Kavishka",
+    imageUrl: "/images/excom/2025/kavindu-kavishka.jpg",
+    title: "chair",
+    linkdInURL: "",
+    facebookURL: "",
+    category: "wie",
   },
 ];

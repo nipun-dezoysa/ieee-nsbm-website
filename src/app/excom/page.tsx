@@ -1,17 +1,21 @@
+"use client";
+
 import TwentyThreeExcom from "@/components/excom-page-tabs/2023-excom";
 import TwentyFourExcom from "@/components/excom-page-tabs/2024-excom";
 import TwentyFiveExcom from "@/components/excom-page-tabs/2025-excom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import React from "react";
+import React, { useState } from "react";
 
 export default function Excom() {
+  const [activeCategory, setActiveCategory] = useState("sb");
+
   return (
     <div className="container mx-auto lg:w-[1170px] ">
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold tracking-wider text-center mt-10 mb-5">
         EXECUTIVE COMMITTEE
       </h1>
       <div className="flex items-center">
-        <p className=" w-auto  my-6 text-center f">
+        <p className=" w-auto  my-6 text-center px-5">
           The Executive Committee of the IEEE NSBM Student Branch consists of
           the Chair, the Vice Chair, the Secretary, Founders, and fellow
           representatives from the Board. The purpose of the Executive Committee
@@ -20,6 +24,38 @@ export default function Excom() {
           restrictions, resolutions, and requirements of the Board, as well as
           the IEEE NSBM Student Branch.
         </p>
+      </div>
+      <div className="flex flex-col md:flex-row justify-center gap-4 mb-8 px-10">
+        <button
+          onClick={() => setActiveCategory("sb")}
+          className={`px-6 py-3 rounded-lg text-white md:text-2xl transition-colors ${
+            activeCategory === "ieee"
+              ? "bg-blue hover:bg-blue-600"
+              : "bg-blue hover:bg-blue-500"
+          }`}
+        >
+          IEEE STUDENT BRANCH
+        </button>
+        <button
+          onClick={() => setActiveCategory("wie")}
+          className={`px-6 py-3 rounded-lg text-white md:text-2xl transition-colors ${
+            activeCategory === "wie"
+              ? "bg-purple-600 hover:bg-purple-700"
+              : "bg-purple-500 hover:bg-purple-600"
+          }`}
+        >
+          WIE AFFINITY GROUP
+        </button>
+        <button
+          onClick={() => setActiveCategory("cs")}
+          className={`px-6 py-3 rounded-lg text-white md:text-2xl transition-colors ${
+            activeCategory === "cs"
+              ? "bg-orange-500 hover:bg-orange-600"
+              : "bg-orange-400 hover:bg-orange-500"
+          }`}
+        >
+          CS STUDENT CHAPTER
+        </button>
       </div>
       <Tabs
         defaultValue="2025"
@@ -31,13 +67,13 @@ export default function Excom() {
           <TabsTrigger value="2023">2023/24</TabsTrigger>
         </TabsList>
         <TabsContent value="2025">
-          <TwentyFiveExcom />
+          <TwentyFiveExcom category={activeCategory} />
         </TabsContent>
         <TabsContent value="2024">
-          <TwentyFourExcom />
+          <TwentyFourExcom category={activeCategory} />
         </TabsContent>
         <TabsContent value="2023">
-          <TwentyThreeExcom />
+          <TwentyThreeExcom category={activeCategory} />
         </TabsContent>
       </Tabs>
     </div>

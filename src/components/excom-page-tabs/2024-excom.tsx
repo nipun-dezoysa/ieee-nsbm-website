@@ -3,11 +3,15 @@ import Link from "next/link";
 import React from "react";
 import { BsFacebook, BsLinkedin } from "react-icons/bs";
 
-export default function TwentyFourExcom() {
-  const TwentyFiveExcom = members.filter(
-    (member: { year: number }) => member.year === 2024,
+interface Props {
+  category: string;
+}
+
+export default function TwentyFourExcom({ category }: Props) {
+  const TwentyFourExcom = members.filter(
+    (member) => member.year === 2024 && member.category === category,
   );
-  const excomCard = TwentyFiveExcom.map(
+  const excomCard = TwentyFourExcom.map(
     (member: {
       year: number;
       name: string;
