@@ -71,7 +71,7 @@ export default function HeroCarousel({
       </Carousel>
 
       {/* <div className="bg-gradient-to-b mt-[-2px] from-primaryLight from-50% h-[50px]" /> */}
-      <div className="bg-blue mt-[-2px] h-[30px]" />
+      <div className={`bg-${bgColor} mt-[-2px] h-[30px]`} />
     </>
   );
 }
