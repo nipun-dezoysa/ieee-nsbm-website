@@ -1,9 +1,4 @@
-import Image from "next/image";
 import React from "react";
-
-import { Button } from "@/components/ui/button";
-
-import JoinUsImage from "@/assets/join-us.png";
 
 function fellowship() {
   return (
