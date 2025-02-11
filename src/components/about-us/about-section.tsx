@@ -93,6 +93,8 @@ function AboutSection({
           <Link
             key={index}
             href={link.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-10 h-10 flex items-center justify-center rounded-full bg-opacity-0 hover:bg-opacity-10 bg-[#00629b] text-[#00629b] duration-500"
           >
             {getIcon(link.platform)}

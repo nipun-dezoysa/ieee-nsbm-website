@@ -18,15 +18,15 @@ export default function About() {
           socialLinks={[
             {
               platform: "facebook",
-              link: "",
+              link: "https://www.facebook.com/ieeensbm",
             },
             {
               platform: "linkedin",
-              link: "",
+              link: "https://www.linkedin.com/company/ieeesbnsbm/",
             },
             {
               platform: "instagram",
-              link: "",
+              link: "https://www.instagram.com/ieee_nsbm",
             },
           ]}
           description={`stablished in 2015, the IEEE Student Branch at NSBM Green University is part of the global IEEE community, bringing together members from the Faculty of Computing and the Faculty of Engineering of NSBM. This branch offers students the chance to enhance their knowledge and skills in electrical engineering, electronics, computing, and related fields, all while encouraging personal and professional growth.
@@ -44,15 +44,15 @@ As part of IEEE’s extensive network, the IEEE Student Branch of NSBM connects 
           socialLinks={[
             {
               platform: "facebook",
-              link: "",
+              link: "https://www.facebook.com/nsbmwie",
             },
             {
               platform: "linkedin",
-              link: "",
+              link: "https://www.linkedin.com/company/ieee-women-in-engineering-nsbm/",
             },
             {
               platform: "instagram",
-              link: "",
+              link: "https://www.instagram.com/ieeewie_nsbm",
             },
           ]}
           description={`IEEE Women in Engineering (WIE) is a global platform of IEEE members and volunteers dedicated to advancing women engineers and scientists and empowering young girls throughout the world to pursue academic interests in engineering and scientific professions. 
@@ -69,15 +69,15 @@ As part of IEEE’s extensive network, the IEEE Student Branch of NSBM connects 
           socialLinks={[
             {
               platform: "facebook",
-              link: "",
+              link: "https://www.facebook.com/ieeecsnsbm",
             },
             {
               platform: "linkedin",
-              link: "",
+              link: "https://www.linkedin.com/company/ieee-computer-society-nsbm/",
             },
             {
               platform: "instagram",
-              link: "",
+              link: "https://www.instagram.com/ieeecs_nsbm",
             },
           ]}
           description={`IEEE Computer Society (often abbreviated as the Computer Society or CS) is a professional society of the Institute of Electrical and Electronics Engineers (IEEE). Its purpose is "to advance the theory, practice, and application of computer and information processing science and technology" and the "professional standing of its members". The CS is the largest of 39 technical societies organised under the IEEE Technical Activities Board.
