@@ -11,14 +11,14 @@ import React from "react";
 import DVC from "@/assets/bc-and-excom/dvc.png";
 
 function page() {
-  const cimages = [
+  const carrouselImages = [
     {
       image: duothanImg,
       text: "Test",
     },
   ];
 
-  const excoms = [
+  const pastExcom = [
     {
       name: "Lihini Nisansala",
       position: "Chairperson",
@@ -47,7 +47,7 @@ function page() {
   ];
   return (
     <>
-      <HeroCarousel cimages={cimages} bgColor="wieLight" />
+      <HeroCarousel cimages={carrouselImages} bgColor="wieLight" />
       <PageIntro
         title="Women In Engineering"
         subTitle="IEEE WOMEN IN ENGINEERING AFFINITY GROUP OF NSBM"
@@ -65,14 +65,17 @@ function page() {
         women's access to the technology sector and we are making the initial
         steps in that direction by hosting motivational sessions for Women in
         Tech."
-        imgUrl="https://placehold.co/869x1000"
+        imgUrl={DVC}
       />
-      <PastExcomSection title="Executive Committee 2020/21" excoms={excoms} />
+      <PastExcomSection
+        title="Executive Committee 2020/21"
+        excoms={pastExcom}
+      />
       <PastExcomSection
         title="Newly Appointed Executive Committee 2022/23"
-        excoms={excoms}
+        excoms={pastExcom}
       />
-      <PastExcomSection title="Past Executive Committee" excoms={excoms} />
+      <PastExcomSection title="Past Executive Committee" excoms={pastExcom} />
       <ShapeFuture />
     </>
   );
