@@ -1,6 +1,8 @@
+"use client";
 import duothanImg from "@/assets/hero-images/duothan4.0.jpg";
 import EventCard from "@/components/index/event-card";
 import HeroCarousel from "@/components/index/hero-section";
+import ShapeFuture from "@/components/index/shape-future";
 import ExcomSection from "@/components/wie-cs/ex-com-section";
 import PageIntro from "@/components/wie-cs/page-intro";
 import React from "react";
@@ -34,6 +36,7 @@ function page() {
         Tech."
         imgUrl="https://placehold.co/869x1000"
       />
+      <ShapeFuture />
     </>
   );
 }

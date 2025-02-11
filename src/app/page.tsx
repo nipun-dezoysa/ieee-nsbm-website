@@ -11,6 +11,7 @@ import EventCard from "@/components/index/event-card";
 import ExecutiveCommittee from "@/components/index/executive-committee";
 import Fellowship from "@/components/index/fellowship";
 import HeroCarousel from "@/components/index/hero-section";
+import ShapeFuture from "@/components/index/shape-future";
 import VisionMissionSection from "@/components/index/vm-section";
 
 export default function Home() {
@@ -48,6 +49,7 @@ export default function Home() {
       <EventCard />
       <ExecutiveCommittee />
       <Fellowship />
+      <ShapeFuture />
     </div>
   );
 }
