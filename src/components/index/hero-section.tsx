@@ -18,11 +18,13 @@ interface HeroCarouselProps {
   cimages: CarouselImage[];
   bgColor: string;
   title?: string;
+  gradient: string;
 }
 
 export default function HeroCarousel({
   cimages,
   bgColor,
+  gradient,
   title,
 }: HeroCarouselProps) {
   const plugin = React.useRef(
@@ -45,9 +47,10 @@ export default function HeroCarousel({
                   className="object-cover object-center aspect-video"
                 />
                 <div
-                  className={`absolute bottom-0 w-full h-[170px] bg-gradient-to-t from-${bgColor} ${
-                    title && "via-" + bgColor
-                  }`}
+                  className={
+                    "absolute bottom-0 w-full h-[170px] bg-gradient-to-t " +
+                    gradient
+                  }
                 >
                   {title && (
                     <p className="absolute left-2 xl:left-10 bottom-0 text-xs xl:text-base text-white">
@@ -71,7 +74,7 @@ export default function HeroCarousel({
       </Carousel>
 
       {/* <div className="bg-gradient-to-b mt-[-2px] from-primaryLight from-50% h-[50px]" /> */}
-      <div className={`bg-${bgColor} mt-[-2px] h-[30px]`} />
+      <div className={`${bgColor} mt-[-2px] h-[30px]`} />
     </>
   );
 }

@@ -41,7 +41,8 @@ export default function Home() {
     <div>
       <HeroCarousel
         cimages={cimages}
-        bgColor="primaryLight"
+        bgColor="bg-primaryLight"
+        gradient="from-primaryLight via-primaryLight"
         title="Welcome to IEEE Student Branch of NSBM"
       />
       <VisionMissionSection />

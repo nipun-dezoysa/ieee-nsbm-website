@@ -47,7 +47,11 @@ function page() {
   ];
   return (
     <>
-      <HeroCarousel cimages={carrouselImages} bgColor="wieLight" />
+      <HeroCarousel
+        cimages={carrouselImages}
+        bgColor="bg-wieLight"
+        gradient="from-wieLight"
+      />
       <PageIntro
         title="Women In Engineering"
         subTitle="IEEE WOMEN IN ENGINEERING AFFINITY GROUP OF NSBM"
