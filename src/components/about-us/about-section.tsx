@@ -15,7 +15,9 @@ interface AboutSectionProps {
   description: string;
   imageSrc: StaticImageData;
   firstTitleColor?: string;
+  secondTitleColor?: string;
   socialLinks: SocialLink[];
+  imagePosition?: "left" | "right";
 }
 
 function AboutSection({
@@ -25,7 +27,9 @@ function AboutSection({
   description,
   imageSrc,
   firstTitleColor = "#00629b",
+  secondTitleColor = "#000000",
   socialLinks,
+  imagePosition = "right",
 }: AboutSectionProps) {
   const getIcon = (platform: string) => {
     switch (platform) {
@@ -42,42 +46,56 @@ function AboutSection({
 
   return (
     <div className="flex flex-col m-auto w-full max-w-[1170px] px-4 mb-8 md:px-4 lg:px-0">
+      <p className="text-6xl mb-4 w-full text-center font-bold">
+        <span style={{ color: firstTitleColor }}>{firstTitle}</span>{" "}
+        <span style={{ color: secondTitleColor }}>{secondTitle}</span>
+      </p>
+      <p className="text-2xl text-center mb-6 font-medium text-gray-600x">
+        {subtitle}
+      </p>
       <div className="flex flex-col m-auto w-full md:flex-row">
-        <div className="md:w-3/4 md:pr-8">
-          <div className="flex flex-wrap gap-2 w-full">
-            <p
-              className="text-6xl w-full text-center font-bold md:text-left"
-              style={{ color: firstTitleColor }}
-            >
-              {firstTitle}
-            </p>
-            <p className="text-6xl w-full mb-2 text-center font-bold md:text-left">
-              {secondTitle}
-            </p>
+        {imagePosition === "left" && (
+          <div className="order-last md:order-first relative w-full md:w-1/4 min-h-[200px] md:mr-4">
+            <Image
+              src={imageSrc}
+              alt="about section image"
+              fill
+              priority
+              className="object-contain"
+            />
           </div>
-          <p className="text-2xl text-center mb-6 font-medium text-gray-600 md:text-left">
-            {subtitle}
-          </p>
-          <p className="text-lg font-normal text-center md:text-left">
+        )}
+        <div className="md:w-3/4">
+          <p className="text-lg font-normal text-center md:text-justify">
             {description}
           </p>
         </div>
-        <div className="relative w-full md:w-1/4 min-h-[200px]">
-          <Image
-            src={imageSrc}
-            alt="about section image"
-            fill
-            priority
-            className="object-contain"
-          />
-        </div>
+        {imagePosition === "right" && (
+          <div className="order-last relative w-full md:w-1/4 min-h-[200px] md:ml-4">
+            <Image
+              src={imageSrc}
+              alt="about section image"
+              fill
+              priority
+              className="object-contain"
+            />
+          </div>
+        )}
       </div>
-      <div className="flex p-2 my-4 justify-center text-[20px] gap-2">
+      <div
+        className={`flex my-4 text-[20px] gap-2 ${
+          imagePosition === "left"
+            ? "justify-center md:justify-end"
+            : "justify-center md:justify-start"
+        }`}
+      >
         {socialLinks.map((link, index) => (
           <Link
             key={index}
             href={link.link}
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-opacity-0 hover:bg-opacity-10 bg-[#000000] duration-500"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-opacity-0 hover:bg-opacity-10 bg-[#00629b] text-[#00629b] duration-500"
           >
             {getIcon(link.platform)}
           </Link>
