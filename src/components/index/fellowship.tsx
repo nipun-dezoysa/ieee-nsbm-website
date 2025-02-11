@@ -29,7 +29,7 @@ function fellowship() {
             </div>
           </div>
         </div>
-        <div className="flex md:flex-row flex-col justify-center gap-10  ">
+        <div className="flex md:flex-row flex-col justify-center gap-10">
           <Image
             width={600}
             height={123}
