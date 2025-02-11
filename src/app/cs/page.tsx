@@ -49,18 +49,15 @@ function page() {
     <>
       <HeroCarousel
         cimages={carrouselImages}
-        bgColor="bg-wieLight"
-        gradient="from-wieLight"
+        bgColor="bg-csLight"
+        gradient="from-csLight"
       />
       <PageIntro
-        title="Women In Engineering"
-        subTitle="IEEE WOMEN IN ENGINEERING AFFINITY GROUP OF NSBM"
-        textColor="text-wieLight"
-        backgroundColor="bg-[#fcf4ff]"
-        description="IEEE Women in Engineering (WIE) of NSBM is one of the largest academic
-          organizations dedicated to promoting women engineers and scientists,
-          as well as to inspiring girls to follow their academic interests to a
-          career in engineering."
+        title="Computer Society"
+        textColor="text-csLight"
+        subTitle="IEEE COMPUTER SOCIETY STUDENT BRANCH CHAPTER OF NSBM"
+        backgroundColor="bg-[#fff4e1]"
+        description="IEEE Computer Society is a professional society of the Institute of Electrical and Electronics Engineers (IEEE). It sponsors workshops and conferences, operates technical committees, and develops IEEE computing standards. The community supports more than 200 chapters worldwide and participates in educational activities at all levels in CS and professional certification in software engineering. IEEE Computer Society of NSBM is the student chapter of the NSBM Green University, and its purpose is to increase the knowledge in computer literacy & IT, as well as the professional standing of its members."
       />
       <EventCard />
       <ExcomSection

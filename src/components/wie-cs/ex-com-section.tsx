@@ -11,10 +11,10 @@ function ExcomSection({
   imgUrl: StaticImageData;
 }) {
   return (
-    <div className="container mx-auto max-w-[1170px] flex flex-col gap-4 my-12 justify-center items-center text-center  p-4 ">
+    <div className="container mx-auto max-w-[1170px] flex flex-col gap-4 my-12 justify-center items-center text-center  p-10">
       <h1 className="text-4xl lg:text-6xl font-bold text-center">{title}</h1>
       <p>{description}</p>
-      <div className="max-w-[760px] w-full px-5 md:px-10">
+      <div className="max-w-[760px] w-full  md:px-10">
         <Image
           src={imgUrl}
           width={869}
