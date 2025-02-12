@@ -76,8 +76,8 @@ function Footer() {
           <div className="footer-col-content">
             <h3 className="footer-col-title">Student Branch Chapters</h3>
             <div className="footer-col-navs-container">
-              <Link href="#">Women in Engineering</Link>
-              <Link href="#">Computer Society</Link>
+              <Link href="/wie">Women in Engineering</Link>
+              <Link href="/cs">Computer Society</Link>
             </div>
           </div>
         </div>
