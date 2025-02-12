@@ -52,22 +52,23 @@ export default function HeroCarousel({
                   }
                 >
                   {title && (
-                    <p className="absolute left-2 xl:left-10 bottom-0 text-xs xl:text-base text-white">
-                      {item.text}
-                    </p>
+                    <div className="absolute bottom-0 flex flex-row justify-center w-full">
+                      <div className="max-w-[1170px] w-full px-5 xl:px-0">
+                        <h1 className="font-semibold text-white xl:text-3xl text-base pb-2">
+                          {title}
+                        </h1>
+                        <p className="text-xs xl:text-base text-white">
+                          {item.text}
+                        </p>
+                      </div>
+                    </div>
                   )}
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        {title && (
-          <div>
-            <h1 className="absolute left-3 xl:left-10 xl:bottom-8 bottom-10 font-semibold text-white xl:text-3xl text-base">
-              {title}
-            </h1>
-          </div>
-        )}
+
         {/* <CarouselPrevious />
       <CarouselNext /> */}
       </Carousel>
