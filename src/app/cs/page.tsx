@@ -47,11 +47,7 @@ function page() {
   ];
   return (
     <>
-      <HeroCarousel
-        cimages={carrouselImages}
-        bgColor="bg-csLight"
-        gradient="from-csLight"
-      />
+      <HeroCarousel cimages={carrouselImages} gradient="from-csLight" />
       <PageIntro
         title="Computer Society"
         textColor="text-csLight"

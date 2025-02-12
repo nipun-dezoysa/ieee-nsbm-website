@@ -38,16 +38,15 @@ export default function Home() {
     },
   ];
   return (
-    <div>
+    <div className="flex flex-col gap-20">
       <HeroCarousel
         cimages={cimages}
-        bgColor="bg-primaryLight"
         gradient="from-primaryLight via-primaryLight"
         title="Welcome to IEEE Student Branch of NSBM"
       />
       <VisionMissionSection />
-      <BranchCounsellors />
       <EventCard />
+      <BranchCounsellors />
       <ExecutiveCommittee />
       <Fellowship />
       <ShapeFuture />

@@ -39,7 +39,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-primaryDark text-white text-center mt-auto">
+    <footer className="w-full bg-primaryDark text-white text-center mt-20">
       <div className="w-full lg:flex">
         <div className="w-full lg:w-1/4 flex justify-center">
           <div className="bg-primaryLight w-[250px] py-7 rounded-b-3xl mb-8 flex flex-col gap-4">

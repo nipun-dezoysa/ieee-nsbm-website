@@ -63,10 +63,9 @@ const events: Event[] = [
 
 const eventcard: React.FC = () => {
   return (
-    <div className="w-full max-w-5xl mx-auto my-4 sm:px-6 lg:px-8">
-      <h1 className="text-3xl font-bold text-center mb-6 pt-4">
-        LATEST EVENTS
-      </h1>
+    <div className="w-full max-w-[1170px] mx-auto space-y-5 px-5 xl:px-0">
+      <h3 className="text-3xl font-bold text-center">LATEST EVENTS</h3>
+
       <Carousel className="w-full">
         <CarouselContent>
           {events.map((event) => (
@@ -74,33 +73,37 @@ const eventcard: React.FC = () => {
               key={event.id}
               className="md:basis-1/2 sm:basis-1/2 lg:basis-1/3"
             >
-              <div className="p-1">
-                <Card className="h-[30rem] mx-3">
-                  <CardContent className="flex flex-col px-0 h-full justify-between">
-                    <Image
-                      width={350}
-                      height={150}
-                      src={event.imageUrl}
-                      alt={event.title}
-                      className="w-full  mb-4 rounded  "
-                    />
-                    <h2 className="text-xl font-semibold mb-2 px-4">
-                      {event.title}
-                    </h2>
-                    <p className="text-sm text-gray-500 mb-2 px-4 text-left">
-                      {event.date}
-                    </p>
-                    <p className="text-sm px-4">{event.description}</p>
-                    <Button className=" mx-4 mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors  ">
-                      Read More
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
+              <Card className="h-[30rem] shadow-lg rounded-lg overflow-hidden">
+                <CardContent className="flex flex-col p-0 gap-5 h-full">
+                  <div className="w-full h-full space-y-4">
+                    <div className="aspect-video relative w-full">
+                      <Image
+                        src={event.imageUrl}
+                        alt={event.title}
+                        layout="fill"
+                      />
+                    </div>
+
+                    <div className="px-4 flex flex-col gap-1">
+                      <h2 className="text-xl font-semibold ">{event.title}</h2>
+                      <p className="text-sm text-gray-500 text-left">
+                        {event.date}
+                      </p>
+
+                      <p className="text-sm">{event.description}</p>
+                    </div>
+                  </div>
+
+                  <Button className="font-bold min-w-[130px] bg-primaryLight text-white rounded hover:bg-blue-700 transition-colors m-4">
+                    Read More
+                  </Button>
+                </CardContent>
+              </Card>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="hidden md:block">
+
+        <div className="hidden xl:block">
           <CarouselPrevious />
           <CarouselNext />
         </div>

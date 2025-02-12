@@ -16,65 +16,58 @@ interface CarouselImage {
 
 interface HeroCarouselProps {
   cimages: CarouselImage[];
-  bgColor: string;
   title?: string;
   gradient: string;
 }
 
 export default function HeroCarousel({
   cimages,
-  bgColor,
   gradient,
   title,
 }: HeroCarouselProps) {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true }),
+    Autoplay({ delay: 5000, stopOnInteraction: true }),
   );
 
   return (
-    <>
-      <Carousel plugins={[plugin.current]} className="w-full">
-        <CarouselContent>
-          {cimages.map((item, index) => (
-            <CarouselItem key={index} className="relative">
-              <div className="w-full xl:h-[85vh]">
-                <Image
-                  src={item.image}
-                  alt={`carousel image ${index + 1}`}
-                  height={1080}
-                  width={1920}
-                  quality={70}
-                  className="object-cover object-center aspect-video"
-                />
-                <div
-                  className={
-                    "absolute bottom-0 w-full h-[170px] bg-gradient-to-t " +
-                    gradient
-                  }
-                >
-                  {title && (
-                    <p className="absolute left-2 xl:left-10 bottom-0 text-xs xl:text-base text-white">
-                      {item.text}
-                    </p>
-                  )}
-                </div>
+    <Carousel plugins={[plugin.current]} className="w-full">
+      <CarouselContent>
+        {cimages.map((item, index) => (
+          <CarouselItem key={index} className="relative">
+            <div className="w-full xl:h-[85vh] aspect-video">
+              <Image
+                src={item.image}
+                alt={`carousel image ${index + 1}`}
+                quality={70}
+                layout="fill"
+                className="object-cover object-center aspect-video"
+              />
+              <div
+                className={
+                  "absolute bottom-0 w-full h-[170px] bg-gradient-to-t pb-5 " +
+                  gradient
+                }
+              >
+                {title && (
+                  <div className="absolute bottom-0 flex flex-row justify-center w-full pb-5">
+                    <div className="max-w-[1170px] w-full px-5 xl:px-0">
+                      <h1 className="font-semibold text-white xl:text-3xl text-base pb-2">
+                        {title}
+                      </h1>
+                      <p className="text-xs xl:text-base text-white">
+                        {item.text}
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        {title && (
-          <div>
-            <h1 className="absolute left-3 xl:left-10 xl:bottom-8 bottom-10 font-semibold text-white xl:text-3xl text-base">
-              {title}
-            </h1>
-          </div>
-        )}
-        {/* <CarouselPrevious />
-      <CarouselNext /> */}
-      </Carousel>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
 
-      {/* <div className="bg-gradient-to-b mt-[-2px] from-primaryLight from-50% h-[50px]" /> */}
-      <div className={`${bgColor} mt-[-2px] h-[30px]`} />
-    </>
+      {/* <CarouselPrevious />
+      <CarouselNext /> */}
+    </Carousel>
   );
 }

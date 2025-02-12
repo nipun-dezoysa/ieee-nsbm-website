@@ -36,8 +36,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
-    "@commitlint/cli": "^19.4.1",
-    "@commitlint/config-conventional": "^19.4.1",
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -55,5 +55,12 @@
       "biome format --write --no-errors-on-unmatched",
       "biome check --write --no-errors-on-unmatched"
     ]
-  }
+  },
+  "engines": {
+    "npm": "Unsupported. Use bun instead.",
+    "node": ">=20",
+    "yarn": "Unsupported. Use bun instead.",
+    "pnpm": "Unsupported. Use bun instead."
+  },
+  "packageManager": "bun@1.0.6"
 }
