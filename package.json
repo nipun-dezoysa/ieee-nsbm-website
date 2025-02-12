@@ -61,5 +61,6 @@
     "node": ">=20",
     "yarn": "Unsupported. Use bun instead.",
     "pnpm": "Unsupported. Use bun instead."
-  }
+  },
+  "packageManager": "bun@1.0.6"
 }
