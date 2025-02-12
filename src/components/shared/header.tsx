@@ -9,6 +9,8 @@ import IeeeSbWhiteImage from "@/assets/ieee-sb-white.png";
 import { Separator } from "@/components/ui/separator";
 import { ROUTES } from "@/constants/routes.constants";
 
+import { usePathname } from "next/navigation";
+
 interface GlobalNavItemProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   last?: boolean;
 }
@@ -78,8 +80,20 @@ function LocalNav() {
     ROUTES.JOIN_US,
   ];
 
+  const pathname = usePathname();
+
+  const bgColor =
+    {
+      "/wie": "bg-wieLight",
+      "/cs": "bg-csLight",
+    }[pathname] || "bg-primaryLight";
+
   return (
-    <div className="hidden md:flex justify-center w-full bg-blue z-50 sticky top-0">
+    <div
+      className={
+        "hidden md:flex justify-center w-full  z-50 sticky top-0 " + bgColor
+      }
+    >
       <nav className="flex flex-row gap-6 uppercase font-semibold justify-center items-center py-3 text-white max-w-[1170px] grow shadow-2xl">
         {navItems.map((item) => (
           <LocalNavItem
@@ -100,11 +114,23 @@ function Header() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const closeMenu = () => setMenuOpen(false);
 
+  const pathname = usePathname();
+
+  const bgColor =
+    {
+      "/wie": "bg-wieLight",
+      "/cs": "bg-csLight",
+    }[pathname] || "bg-primaryLight";
+
   return (
     <header>
       <GlobalNav />
 
-      <div className="flex justify-between items-center w-full bg-blue p-3 md:p-0">
+      <div
+        className={
+          "flex justify-between items-center w-full  p-3 md:p-0 " + bgColor
+        }
+      >
         <div className="md:hidden flex items-center">
           <button
             className="text-white text-3xl md:hidden mr-2 mb-1.5"
@@ -142,7 +168,7 @@ function Header() {
         onClick={closeMenu}
       />
       <div
-        className={`fixed left-0 top-0 h-full w-[250px] bg-blue text-white z-50 p-5 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed left-0 top-0 h-full w-[250px] ${bgColor} text-white z-50 p-5 transform transition-transform duration-300 ease-in-out ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         onClick={(e) => e.stopPropagation()}
