@@ -20,9 +20,9 @@ function PastExcomSection({
         {excoms.map((excom, index) => (
           <div
             key={index}
-            className="w-[200px] text-center flex flex-col items-center"
+            className="w-[200px] text-center flex flex-col items-center rounded-lg border shadow-sm overflow-hidden"
           >
-            <div className="rounded-full w-[128px] h-[128px] overflow-hidden">
+            <div className="w-full h-[200px] ">
               <Image
                 src={excom.imgUrl}
                 alt="excom"
@@ -31,8 +31,10 @@ function PastExcomSection({
                 className="h-full w-full object-cover"
               />
             </div>
-            <h2 className="text-xl font-bold mt-1">{excom.name}</h2>
-            <p className="text-lg">{excom.position}</p>
+            <div className="p-1">
+              <h2 className="text-lg font-bold">{excom.name}</h2>
+              <p className="text-md">{excom.position}</p>
+            </div>
           </div>
         ))}
       </div>
