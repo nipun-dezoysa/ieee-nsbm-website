@@ -25,7 +25,7 @@ function page() {
       imgUrl: DVC,
     },
     {
-      name: "Name",
+      name: "Nipun Avishka",
       position: "Position",
       imgUrl: DVC,
     },
@@ -58,9 +58,9 @@ function page() {
           as well as to inspiring girls to follow their academic interests to a
           career in engineering."
       />
-      <EventCard />
+      <EventCard category="wie" />
       <ExcomSection
-        title="Executive Committee 2021/22"
+        title="Executive Committee 2025/26"
         description="The Women’s Executive Board is designed to help the Techie Girls to
         drive better decisions, gain fearless confidence and achieve their
         biggest outcomes with intention and passion. We intend to increase
@@ -68,14 +68,6 @@ function page() {
         steps in that direction by hosting motivational sessions for Women in
         Tech."
         imgUrl={DVC}
-      />
-      <PastExcomSection
-        title="Executive Committee 2020/21"
-        excoms={pastExcom}
-      />
-      <PastExcomSection
-        title="Newly Appointed Executive Committee 2022/23"
-        excoms={pastExcom}
       />
       <PastExcomSection title="Past Executive Committee" excoms={pastExcom} />
       <ShapeFuture />
