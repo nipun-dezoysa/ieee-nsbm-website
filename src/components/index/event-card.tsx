@@ -16,6 +16,7 @@ interface Event {
   date: string;
   description: string;
   imageUrl: string;
+  category: string;
 }
 
 const events: Event[] = [
@@ -26,6 +27,7 @@ const events: Event[] = [
     description:
       "The 'AYUBOWAN IEEE 2022' is a session that raises awareness among the university students on Introduction to IEEE Student Branch of NSBM, Advantages of IEEE Membership, and How to Become an IEEE Recognized individual.",
     imageUrl: "https://placehold.co/300x150.png",
+    category: "sb",
   },
   {
     id: 2,
@@ -34,6 +36,7 @@ const events: Event[] = [
     description:
       "MAD-Fest is a platform which opens for passionate Mobile Application Developers.",
     imageUrl: "https://placehold.co/300x150.png",
+    category: "cs",
   },
   {
     id: 3,
@@ -42,6 +45,7 @@ const events: Event[] = [
     description:
       "Arduino Day is a celebration of the Arduino Community and its achievements.",
     imageUrl: "https://placehold.co/300x150.png",
+    category: "wie",
   },
   {
     id: 4,
@@ -50,6 +54,7 @@ const events: Event[] = [
     description:
       "Duothan 2.0 is a hackathon that is organized by the IEEE Student Branch of NSBM which is competed by groups of two. This hackathon is organized with the explicit purpose of enhancing the coding skills of undergraduates.",
     imageUrl: "https://placehold.co/300x150.png",
+    category: "cs",
   },
   {
     id: 5,
@@ -58,17 +63,21 @@ const events: Event[] = [
     description:
       "Road To Full Stack - Mobile organized by IEEE Student Branch Affinity Group of NSBM is a great opportunity for you to begin the strategy of Mobile Application Development.",
     imageUrl: "https://placehold.co/300x150.png",
+    category: "cs",
   },
 ];
 
-const eventcard: React.FC = () => {
+const eventcard = ({ category }: { category?: string }) => {
+  const filteredEvents = category
+    ? events.filter((event) => event.category === category)
+    : events;
   return (
     <div className="w-full max-w-[1170px] mx-auto space-y-5 px-5 xl:px-0">
       <h3 className="text-3xl font-bold text-center">LATEST EVENTS</h3>
 
       <Carousel className="w-full">
         <CarouselContent>
-          {events.map((event) => (
+          {filteredEvents.map((event) => (
             <CarouselItem
               key={event.id}
               className="md:basis-1/2 sm:basis-1/2 lg:basis-1/3"
