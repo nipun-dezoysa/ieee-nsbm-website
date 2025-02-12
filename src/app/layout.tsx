@@ -23,7 +23,6 @@ export default function RootLayout({
         className={`${mainFont.className} antialiased flex flex-col min-h-screen font-poppins w-full h-full relative`}
       >
         <Header />
-
         <LocalNav />
 
         {children}

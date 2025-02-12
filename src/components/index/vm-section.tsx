@@ -14,9 +14,9 @@ import { TbTargetArrow } from "react-icons/tb";
 
 const VisionMissionSection = () => {
   return (
-    <div className="container mx-auto max-w-[1170px] flex flex-col mt-10 justify-center items-center">
-      <div className="max-w-[300px] sm:max-w-[900px] flex flex-col p-5 sm:flex-row justify-center gap-5 ">
-        <Card className="shadow-lg flex-1 bg-stone-100 border-none">
+    <div className="container mx-auto max-w-[1170px] flex flex-col justify-center items-center">
+      <div className="max-w-[300px] sm:max-w-[1170px] flex flex-col sm:flex-row justify-center gap-5 ">
+        <Card className="shadow-lg flex-1 ">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-lg font-bold">
               <TbTargetArrow size={35} />
@@ -35,7 +35,7 @@ const VisionMissionSection = () => {
           </CardHeader>
         </Card>
 
-        <Card className="shadow-lg flex-1 bg-stone-100 border-none">
+        <Card className="shadow-lg flex-1 ">
           <CardHeader>
             <CardTitle className="flex items-center gap-3 text-lg font-bold">
               <FaEye size={35} />

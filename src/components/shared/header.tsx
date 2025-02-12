@@ -53,7 +53,7 @@ function GlobalNav() {
   ];
 
   return (
-    <div className="hidden md:flex justify-center w-full bg-grey">
+    <div className="hidden md:flex justify-center w-full bg-grey xl:px-0 px-5">
       <div className="flex flex-row gap-2 justify-start items-center h-[50px] text-white max-w-[1170px] grow">
         {navItems.map((item, i) => (
           <GlobalNavItem

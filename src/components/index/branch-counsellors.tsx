@@ -2,6 +2,7 @@ import DVC from "@/assets/bc-and-excom/dvc.png";
 import placeholder from "@/assets/placeholder.png";
 import Image from "next/image";
 import React from "react";
+import { Card, CardDescription, CardTitle } from "../ui/card";
 
 import { StaticImageData } from "next/image";
 
@@ -35,54 +36,34 @@ const counsellors: Counsellor[] = [
 
 const BranchCounsellors: React.FC = () => {
   return (
-    <div className="container mx-auto p-4 max-w-[1170px]">
-      <h1 className="text-4xl lg:text-6xl font-bold text-center">
+    <div className="container mx-auto max-w-[1170px] space-y-5 px-5 xl:px-0">
+      <h3 className="text-3xl font-bold text-center">
         STUDENT BRANCH COUNSELLORS
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 mt-12">
-        {counsellors.slice(0, 3).map((counsellor) => (
-          <div
-            key={counsellor.name}
-            className="flex flex-col items-center text-center "
+      </h3>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 ">
+        {counsellors.map((counsellor, index) => (
+          <Card
+            key={index}
+            className="flex flex-col items-center overflow-hidden"
           >
-            <Image
-              src={counsellor.imageUrl}
-              alt={counsellor.name}
-              width={200}
-              height={400}
-              className="rounded-full w-36 h-36 mb-4"
-            />
-            <h2 className="text-xl font-bold mb-2">{counsellor.name}</h2>
-            <p className="text-base font-bold text-gray-600">
-              {counsellor.title}
-            </p>
-            <p className="text-base font-bold text-gray-600 mb-2">
-              {counsellor.position}
-            </p>
-          </div>
-        ))}
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 mt-8">
-        {counsellors.slice(3).map((counsellor) => (
-          <div
-            key={counsellor.name}
-            className="flex flex-col items-center text-center"
-          >
-            <Image
-              src={counsellor.imageUrl}
-              alt={counsellor.name}
-              width={150}
-              height={150}
-              className="rounded-full w-36 h-36 mb-4"
-            />
-            <h2 className="text-xl font-bold mb-2">{counsellor.name}</h2>
-            <p className="text-base font-bold text-gray-600">
-              {counsellor.title}
-            </p>
-            <p className="text-base font-bold text-gray-600 mb-2">
-              {counsellor.position}
-            </p>
-          </div>
+            <div className="aspect-square w-full relative">
+              <Image
+                src={counsellor.imageUrl}
+                alt={counsellor.name}
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+
+            <div className="text-center my-5 space-y-1">
+              <CardTitle className="text-xl font-semibold">
+                {counsellor.name}
+              </CardTitle>
+              <CardDescription>{counsellor.title}</CardDescription>
+              <p className="text-sm text-gray-500">{counsellor.position}</p>
+            </div>
+          </Card>
         ))}
       </div>
     </div>
