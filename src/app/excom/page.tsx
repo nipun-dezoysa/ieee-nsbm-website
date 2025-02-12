@@ -29,7 +29,7 @@ export default function Excom() {
         <button
           onClick={() => setActiveCategory("sb")}
           className={`px-6 py-3 rounded-lg text-white md:text-2xl transition-colors ${
-            activeCategory === "ieee"
+            activeCategory === "sb"
               ? "bg-blue hover:bg-blue-600"
               : "bg-blue hover:bg-blue-500"
           }`}
@@ -40,8 +40,8 @@ export default function Excom() {
           onClick={() => setActiveCategory("wie")}
           className={`px-6 py-3 rounded-lg text-white md:text-2xl transition-colors ${
             activeCategory === "wie"
-              ? "bg-purple-600 hover:bg-purple-700"
-              : "bg-purple-500 hover:bg-purple-600"
+              ? "bg-wieLight hover:bg-wieLight"
+              : "bg-wieDark hover:bg-wieLight"
           }`}
         >
           WIE AFFINITY GROUP
@@ -50,8 +50,8 @@ export default function Excom() {
           onClick={() => setActiveCategory("cs")}
           className={`px-6 py-3 rounded-lg text-white md:text-2xl transition-colors ${
             activeCategory === "cs"
-              ? "bg-orange-500 hover:bg-orange-600"
-              : "bg-orange-400 hover:bg-orange-500"
+              ? "bg-csDark hover:bg-csDark"
+              : "bg-csLight hover:bg-csDark"
           }`}
         >
           CS STUDENT CHAPTER
