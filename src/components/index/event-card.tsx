@@ -20,7 +20,7 @@ const EventCard = ({ category }: { category?: string }) => {
     : events;
 
   const handleReadMore = (link: string) => {
-    router.push("/events/" + link);
+    router.push("/events-page/" + link);
   };
   return (
     <div className="w-full max-w-[1170px] mx-auto space-y-5 px-5 xl:px-0">
@@ -50,7 +50,7 @@ const EventCard = ({ category }: { category?: string }) => {
                         {event.year}
                       </p>
 
-                      <p className="text-sm text-left line-clamp-6 overflow-hidden">
+                      <p className="text-sm text-left line-clamp-4 md:line-clamp-5 lg:line-clamp-6 overflow-hidden">
                         {event.description}
                       </p>
                     </div>
