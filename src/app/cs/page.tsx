@@ -18,33 +18,6 @@ function page() {
     },
   ];
 
-  const pastExcom = [
-    {
-      name: "Lihini Nisansala",
-      position: "Chairperson",
-      imgUrl: DVC,
-    },
-    {
-      name: "Name",
-      position: "Position",
-      imgUrl: DVC,
-    },
-    {
-      name: "Name",
-      position: "Position",
-      imgUrl: DVC,
-    },
-    {
-      name: "Name",
-      position: "Position",
-      imgUrl: DVC,
-    },
-    {
-      name: "Name",
-      position: "Position",
-      imgUrl: DVC,
-    },
-  ];
   return (
     <>
       <HeroCarousel cimages={carrouselImages} gradient="from-csLight" />
@@ -61,7 +34,11 @@ function page() {
         description="The Executive Committee of IEEE Computer Society will deliver organizational guidance to the community. Join the IEEE Computer Society, a leading organization for anyone engaged in computers and information technology to expand their knowledge."
         imgUrl={DVC}
       />
-      <PastExcomSection title="Past Executive Committee" excoms={pastExcom} />
+      <PastExcomSection
+        title="Past Executive Committee"
+        year={2024}
+        category="cs"
+      />
       <ShapeFuture />
     </>
   );

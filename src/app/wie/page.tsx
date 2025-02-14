@@ -18,33 +18,6 @@ function page() {
     },
   ];
 
-  const pastExcom = [
-    {
-      name: "Lihini Nisansala",
-      position: "Chairperson",
-      imgUrl: DVC,
-    },
-    {
-      name: "Nipun Avishka",
-      position: "Position",
-      imgUrl: DVC,
-    },
-    {
-      name: "Name",
-      position: "Position",
-      imgUrl: DVC,
-    },
-    {
-      name: "Name",
-      position: "Position",
-      imgUrl: DVC,
-    },
-    {
-      name: "Name",
-      position: "Position",
-      imgUrl: DVC,
-    },
-  ];
   return (
     <>
       <HeroCarousel cimages={carrouselImages} gradient="from-wieLight" />
@@ -69,7 +42,11 @@ function page() {
         Tech."
         imgUrl={DVC}
       />
-      <PastExcomSection title="Past Executive Committee" excoms={pastExcom} />
+      <PastExcomSection
+        title="Past Executive Committee"
+        year={2024}
+        category="cs"
+      />
       <ShapeFuture />
     </>
   );
