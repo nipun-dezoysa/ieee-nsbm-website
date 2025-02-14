@@ -29,16 +29,13 @@ function page() {
         description="IEEE Computer Society is a professional society of the Institute of Electrical and Electronics Engineers (IEEE). It sponsors workshops and conferences, operates technical committees, and develops IEEE computing standards. The community supports more than 200 chapters worldwide and participates in educational activities at all levels in CS and professional certification in software engineering. IEEE Computer Society of NSBM is the student chapter of the NSBM Green University, and its purpose is to increase the knowledge in computer literacy & IT, as well as the professional standing of its members."
       />
       <EventCard category="cs" />
-      <ExcomSection
-        title="Executive Committee 2025/26"
-        description="The Executive Committee of IEEE Computer Society will deliver organizational guidance to the community. Join the IEEE Computer Society, a leading organization for anyone engaged in computers and information technology to expand their knowledge."
-        imgUrl={DVC}
-      />
       <PastExcomSection
-        title="Past Executive Committee"
-        year={2024}
+        title="Executive Committee 2025/26"
+        year={2025}
         category="cs"
+        description="The Executive Committee of IEEE Computer Society will deliver organizational guidance to the community. Join the IEEE Computer Society, a leading organization for anyone engaged in computers and information technology to expand their knowledge."
       />
+      <ExcomSection title="Past Executive Committee" imgUrl={DVC} />
       <ShapeFuture />
     </>
   );

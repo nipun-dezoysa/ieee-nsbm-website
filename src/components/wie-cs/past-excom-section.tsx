@@ -7,14 +7,21 @@ function PastExcomSection({
   title,
   year,
   category,
-}: { title: string; year: number; category: string }) {
+  description,
+}: {
+  title: string;
+  year: number;
+  category: string;
+  description: string;
+}) {
   const filteredMembers = members.filter(
     (member) => member.category === category && member.year === year,
   );
   return (
-    <div className="container mx-auto max-w-[1170px] px-4 mb-20">
-      <h1 className="text-4xl font-bold text-center">{title}</h1>
-      <div className="flex flex-wrap justify-center gap-4 mt-5">
+    <div className="container mx-auto max-w-[1170px] px-4 mt-14 flex flex-col gap-4">
+      <h1 className="text-4xl lg:text-6xl font-bold text-center">{title}</h1>
+      <p className="text-center">{description}</p>
+      <div className="flex flex-wrap justify-center gap-4">
         {filteredMembers.map((excom, index) => (
           <div
             key={index}

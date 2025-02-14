@@ -32,21 +32,18 @@ function page() {
           career in engineering."
       />
       <EventCard category="wie" />
-      <ExcomSection
+      <PastExcomSection
         title="Executive Committee 2025/26"
+        year={2025}
+        category="wie"
         description="The Women’s Executive Board is designed to help the Techie Girls to
         drive better decisions, gain fearless confidence and achieve their
         biggest outcomes with intention and passion. We intend to increase
         women's access to the technology sector and we are making the initial
         steps in that direction by hosting motivational sessions for Women in
         Tech."
-        imgUrl={DVC}
       />
-      <PastExcomSection
-        title="Past Executive Committee"
-        year={2024}
-        category="wie"
-      />
+      <ExcomSection title="Past Executive Committee" imgUrl={DVC} />
       <ShapeFuture />
     </>
   );
