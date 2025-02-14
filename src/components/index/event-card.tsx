@@ -13,7 +13,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 import { Button } from "../ui/button";
 
-const eventcard = ({ category }: { category?: string }) => {
+const EventCard = ({ category }: { category?: string }) => {
   const router = useRouter();
   const filteredEvents = category
     ? events.filter((event) => event.category === category)
@@ -77,4 +77,4 @@ const eventcard = ({ category }: { category?: string }) => {
   );
 };
 
-export default eventcard;
+export default EventCard;
