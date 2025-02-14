@@ -1,3 +1,4 @@
+"use client";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -8,13 +9,19 @@ import {
 } from "@/components/ui/carousel";
 import { events } from "@/content/event-data";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { Button } from "../ui/button";
 
 const eventcard = ({ category }: { category?: string }) => {
+  const router = useRouter();
   const filteredEvents = category
     ? events.filter((event) => event.category === category)
     : events;
+
+  const handleReadMore = (link: string) => {
+    router.push("/events/" + link);
+  };
   return (
     <div className="w-full max-w-[1170px] mx-auto space-y-5 px-5 xl:px-0">
       <h3 className="text-3xl font-bold text-center">LATEST EVENTS</h3>
@@ -49,7 +56,10 @@ const eventcard = ({ category }: { category?: string }) => {
                     </div>
                   </div>
 
-                  <Button className="font-bold min-w-[130px] bg-primaryLight text-white rounded hover:bg-blue-700 transition-colors mx-4 mb-4">
+                  <Button
+                    onClick={() => handleReadMore(event.link)}
+                    className="font-bold min-w-[130px] bg-primaryLight text-white rounded hover:bg-blue-700 transition-colors mx-4 mb-4"
+                  >
                     Read More
                   </Button>
                 </CardContent>
