@@ -45,7 +45,7 @@ function page() {
       <PastExcomSection
         title="Past Executive Committee"
         year={2024}
-        category="cs"
+        category="wie"
       />
       <ShapeFuture />
     </>
